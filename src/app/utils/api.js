@@ -1,5 +1,11 @@
 import fetch from 'node-fetch';
 
+/**
+ * Sends a POST request to add a new blog post.
+ *
+ * @param {Object} post - The blog post to add.
+ * @return {Promise} A promise that resolves to the response from the server.
+ */
 export async function addPost(post) {
   const response = await fetch('/api/blog-post/add-post', {
     method: 'POST',
