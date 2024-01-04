@@ -17,6 +17,12 @@ export async function addPost(post) {
   return response.json();
 }
 
+/**
+ * Sends a GET request to retrieve the details of a specific blog post.
+ *
+ * @param {string} id - The id of the blog post.
+ * @return {Promise} A promise that resolves to the response from the server.
+ */
 export async function getPostDetails(id) {
   const response = await fetch(`/api/blog-post/blog-details?blogID=${id}`);
   return response.json();
