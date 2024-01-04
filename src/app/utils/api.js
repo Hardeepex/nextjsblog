@@ -45,6 +45,12 @@ export async function updatePost(post) {
   return response.json();
 }
 
+/**
+ * Sends a DELETE request to remove a blog post.
+ *
+ * @param {string} id - The id of the blog post to be removed.
+ * @return {Promise} A promise that resolves to the response from the server.
+ */
 export async function deletePost(id) {
   const response = await fetch(`/api/blog-post/delete-post?id=${id}`, {
     method: 'DELETE',
