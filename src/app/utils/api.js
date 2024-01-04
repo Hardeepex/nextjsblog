@@ -58,6 +58,11 @@ export async function deletePost(id) {
   return response.json();
 }
 
+/**
+ * Sends a GET request to retrieve all blog posts.
+ *
+ * @return {Promise} A promise that resolves to the response from the server.
+ */
 export async function getAllPosts() {
   const response = await fetch('/api/blog-post/get-all-posts');
   return response.json();
