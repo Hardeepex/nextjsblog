@@ -28,6 +28,12 @@ export async function getPostDetails(id) {
   return response.json();
 }
 
+/**
+ * Sends a PUT request to update a blog post.
+ *
+ * @param {Object} post - The object representing the updated blog post.
+ * @return {Promise} A promise that resolves to the response from the server.
+ */
 export async function updatePost(post) {
   const response = await fetch('/api/blog-post/update-post', {
     method: 'PUT',
